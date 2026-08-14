@@ -36,6 +36,12 @@ git clone https://github.com/allecsc/stremio-subs-ro.git
 cd stremio-subs-ro && npm install && npm start
 ```
 
+### ☁️ Deploy pe Vercel (gratuit)
+
+1. Fork sau clonează repo-ul pe GitHub.
+2. Importă repo-ul pe [vercel.com/new](https://vercel.com/new) (framework preset: **Other**; nu sunt necesare variabile de mediu).
+3. Apasă **Deploy**. Addonul va fi disponibil la `https://<proiectul-tau>.vercel.app/configure`.
+
 ## ☕ Susține
 
 Dacă ți se pare util acest addon, poți să-mi [oferi o cafea pe Revolut](https://revolut.me/altcelalalt)!
@@ -72,6 +78,12 @@ A Stremio addon that fetches high-quality subtitles from [subs.ro](https://subs.
 git clone https://github.com/allecsc/stremio-subs-ro.git
 cd stremio-subs-ro && npm install && npm start
 ```
+
+### ☁️ Deploy to Vercel (free tier)
+
+1. Fork or clone the repo to GitHub.
+2. Import it at [vercel.com/new](https://vercel.com/new) (framework preset: **Other**; no environment variables needed).
+3. Click **Deploy**. Your addon will be live at `https://<your-project>.vercel.app/configure`.
 
 ## ☕ Support
 

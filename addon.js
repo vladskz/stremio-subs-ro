@@ -175,12 +175,13 @@ const subtitlesHandler = async ({ type, id, extra, config }) => {
         );
       }
 
-      // BeamUp URL detection - hardcoded for production, dynamic for local dev
-      const BEAMUP_URL =
+      // Base URL for proxy links: prefer the request host (set by server.js
+      // from x-forwarded-host on Vercel/BeamUp), then an explicit env var,
+      // then the legacy BeamUp URL as a final fallback.
+      const baseUrl =
+        config.baseUrl ||
+        process.env.ADDON_BASE_URL ||
         "https://cdcd7719a6b3-stremio-subs-ro.baby-beamup.club";
-      const baseUrl = process.env.NODE_ENV
-        ? BEAMUP_URL
-        : config.baseUrl || "http://localhost:7000";
 
       const allSubtitles = [];
 

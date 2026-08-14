@@ -12,7 +12,6 @@ const proxyRouter = require("./lib/proxy");
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 7000;
 
 app.use(
   helmet({
@@ -114,16 +113,24 @@ app.get("/:config?/subtitles/:type/:id/:extra?.json", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Addon live on port ${PORT}`);
-  console.log(`[INFO] Logs silenced for production.`);
+module.exports = app;
 
-  // Scheduled restart every 24 hours to prevent memory leaks/hangs
-  const RESTART_INTERVAL = 24 * 60 * 60 * 1000; // 24 hours
-  setTimeout(() => {
-    console.error("[SYSTEM] Planned 24h restart triggered. Exiting...");
-    process.exit(0);
-  }, RESTART_INTERVAL);
+// Start the server only when run directly (e.g. `node server.js`).
+// On serverless platforms (Vercel) the app is required by api/index.js instead.
+if (require.main === module) {
+  const PORT = process.env.PORT || 7000;
 
-  console.log(`[SYSTEM] Scheduled restart in 24 hours.`);
-});
+  app.listen(PORT, () => {
+    console.log(`🚀 Addon live on port ${PORT}`);
+    console.log(`[INFO] Logs silenced for production.`);
+
+    // Scheduled restart every 24 hours to prevent memory leaks/hangs
+    const RESTART_INTERVAL = 24 * 60 * 60 * 1000; // 24 hours
+    setTimeout(() => {
+      console.error("[SYSTEM] Planned 24h restart triggered. Exiting...");
+      process.exit(0);
+    }, RESTART_INTERVAL);
+
+    console.log(`[SYSTEM] Scheduled restart in 24 hours.`);
+  });
+}
