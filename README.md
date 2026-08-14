@@ -17,9 +17,11 @@ Un addon pentru Stremio care aduce subtitrări românești de calitate de pe [su
 
 ### 🚀 Instalare
 
-1. **[Click aici pentru Instalare](https://cdcd7719a6b3-stremio-subs-ro.baby-beamup.club/configure.html)**
+1. **[Click aici pentru Instalare (Vercel)](https://stremio-subs-ro.vercel.app/configure)**
 2. Obține o cheie API gratuită de pe [subs.ro/api](https://subs.ro/api)
 3. Introdu cheia API și apasă "Install"
+
+Alternativ: **[Instalare via BeamUp](https://cdcd7719a6b3-stremio-subs-ro.baby-beamup.club/configure.html)**
 
 ### ✨ Funcționalități
 
@@ -60,9 +62,11 @@ A Stremio addon that fetches high-quality subtitles from [subs.ro](https://subs.
 
 ### 🚀 Installation
 
-1. **[Click here to Install](https://cdcd7719a6b3-stremio-subs-ro.baby-beamup.club/configure.html)**
+1. **[Click here to Install (Vercel)](https://stremio-subs-ro.vercel.app/configure)**
 2. Get your free API key from [subs.ro/api](https://subs.ro/api)
 3. Enter your API key and click "Install"
+
+Alternatively: **[Install via BeamUp](https://cdcd7719a6b3-stremio-subs-ro.baby-beamup.club/configure.html)**
 
 ### ✨ Features
 
